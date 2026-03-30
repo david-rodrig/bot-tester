@@ -23,6 +23,36 @@ The tester progressively escalates the conversation through four primary phases:
 3. **Reframing & Hypotheticals (51-100 messages)**: Employs creative approaches like role-playing and third-person perspectives to bypass simple filters.
 4. **Advanced Techniques (101-150 messages)**: Applies maximum pressure through complex methods like the "Skeleton Key" and context manipulation.
 
+## 📦 Installation
+
+### Prerequisites
+- [Claude Code](https://claude.ai/code) installed.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) installed and configured.
+
+### Step 1: Install the Skill
+
+Copy the `SKILL.md` file to your Claude Code skills directory. Depending on your OS, the path may vary, but typically it runs like this:
+
+```bash
+mkdir -p ~/.claude/skills
+cp SKILL.md ~/.claude/skills/bot-tester.md
+```
+
+### Step 2: Configure Playwright MCP
+
+Ensure the Playwright MCP server is configured in your `~/.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
+```
+
 ## 🚀 Usage
 
 To use this skill with Claude Code:
